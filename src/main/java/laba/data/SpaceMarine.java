@@ -172,7 +172,7 @@ public class SpaceMarine {
         return "ID: " + id +
         "\nИмя: " + name + 
         "\nКоординаты: " + coordinates.toString() + 
-        "\nChapter: " + chapter.toString() + 
+        "\nChapter: \n" + chapter.toString() + 
         "\nДата создания элемента: " + creationDate +
         "\nТип AstartesCategory: " + category + 
         "\nТип Weapon: " + weaponType + 

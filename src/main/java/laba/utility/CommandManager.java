@@ -23,6 +23,7 @@ public class CommandManager {
         commands.put("update", new UpdateCommand());
         commands.put("print_ascending", new PrintAscending());
         commands.put("print_descending", new PrintDescending());
+        commands.put("print_field_ascending_chapter", new PrintFieldAscendingChapter());
     }
 
    
