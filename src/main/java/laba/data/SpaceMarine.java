@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import Exceptions.IncorrectCommandException;
 import Exceptions.IncorrectIDException;
 
-public class SpaceMarine implements Comparable<SpaceMarine>{
+public class SpaceMarine {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates = new Coordinates(0, 0); //Поле не может быть null
@@ -30,11 +30,6 @@ public class SpaceMarine implements Comparable<SpaceMarine>{
     }
 
     public SpaceMarine() {
-    }
-
-    @Override
-    public int compareTo(SpaceMarine spaceMarine) {
-        return this.name.compareTo(spaceMarine.getName());
     }
     
 

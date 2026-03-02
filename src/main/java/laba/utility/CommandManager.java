@@ -21,6 +21,8 @@ public class CommandManager {
         commands.put("clear", new ClearCommand());
         commands.put("remove", new RemoveCommand());
         commands.put("update", new UpdateCommand());
+        commands.put("print_ascending", new PrintAscending());
+        commands.put("print_descending", new PrintDescending());
     }
 
    
