@@ -6,7 +6,7 @@ import data.SpaceMarine;
 import sorter.SortBySpaceMarineNameReverse;
 import utility.CollectionManager;
 
-public class PrintDescending implements Command{
+public class PrintDescendingCommand implements Command{
     @Override
     public void execute() {
         if (CollectionManager.getCollection().size() == 0) {

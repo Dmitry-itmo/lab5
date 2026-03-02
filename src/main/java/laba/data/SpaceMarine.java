@@ -3,8 +3,8 @@ package data;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import Exceptions.IncorrectCommandException;
-import Exceptions.IncorrectIDException;
+import exceptions.IncorrectCommandException;
+import exceptions.IncorrectIDException;
 
 public class SpaceMarine {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически

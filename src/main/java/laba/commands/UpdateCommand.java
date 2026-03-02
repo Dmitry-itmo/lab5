@@ -1,8 +1,8 @@
 package commands;
 
-import Exceptions.IncorrectCommandException;
-import Exceptions.IncorrectIDException;
 import data.*;
+import exceptions.IncorrectCommandException;
+import exceptions.IncorrectIDException;
 import utility.*;
 import static utility.ConsoleManager.*;
 

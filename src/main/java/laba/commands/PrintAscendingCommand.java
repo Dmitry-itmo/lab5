@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import data.SpaceMarine;
 import utility.CollectionManager;
 
-public class PrintAscending implements Command{
+public class PrintAscendingCommand implements Command{
     @Override
     public void execute() {
         if (CollectionManager.getCollection().size() == 0) {

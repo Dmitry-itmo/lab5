@@ -1,8 +1,8 @@
 package commands;
 
-import Exceptions.*;
 import utility.CollectionManager;
 import data.*;
+import exceptions.*;
 
 public class RemoveCommand implements Command{
     @Override

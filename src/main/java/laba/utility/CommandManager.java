@@ -2,8 +2,8 @@ package utility;
 
 import java.util.HashMap;
 
-import Exceptions.*;
 import commands.*;
+import exceptions.*;
 
 public class CommandManager {
 
@@ -21,9 +21,11 @@ public class CommandManager {
         commands.put("clear", new ClearCommand());
         commands.put("remove", new RemoveCommand());
         commands.put("update", new UpdateCommand());
-        commands.put("print_ascending", new PrintAscending());
-        commands.put("print_descending", new PrintDescending());
-        commands.put("print_field_ascending_chapter", new PrintFieldAscendingChapter());
+        commands.put("print_ascending", new PrintAscendingCommand());
+        commands.put("print_descending", new PrintDescendingCommand());
+        commands.put("print_field_ascending_chapter", new PrintFieldAscendingChapterCommand());
+        commands.put("remove_greater", new RemoveGreaterCommand());
+        commands.put("remove_lower", new RemoveLowerCommand());
     }
 
    

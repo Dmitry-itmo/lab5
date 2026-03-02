@@ -1,6 +1,6 @@
 package data;
 
-import Exceptions.IncorrectCommandException;
+import exceptions.IncorrectCommandException;
 
 public class Coordinates {
     private long x;

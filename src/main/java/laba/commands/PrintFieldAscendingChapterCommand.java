@@ -8,7 +8,7 @@ import data.SpaceMarine;
 import sorter.SortByChapterName;
 import utility.CollectionManager;
 
-public class PrintFieldAscendingChapter implements Command{
+public class PrintFieldAscendingChapterCommand implements Command{
     @Override
     public void execute() {
         if (CollectionManager.getCollection().size() == 0) {
@@ -26,5 +26,10 @@ public class PrintFieldAscendingChapter implements Command{
             System.out.println();
             System.out.println(chapter);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "print_field_ascending_chapter - выводит значения поля chapter всех элементов в порядке возрастания";
     }
 }

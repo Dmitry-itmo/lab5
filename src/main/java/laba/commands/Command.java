@@ -1,6 +1,6 @@
 package commands;
 
-import Exceptions.*;
+import exceptions.*;
 
 public interface Command {
     void execute();

@@ -1,9 +1,9 @@
 package commands;
 
-import Exceptions.IncorrectCommandException;
 import data.Chapter;
 import data.Coordinates;
 import data.SpaceMarine;
+import exceptions.IncorrectCommandException;
 import utility.CollectionManager;
 import static utility.ConsoleManager.*;
 
