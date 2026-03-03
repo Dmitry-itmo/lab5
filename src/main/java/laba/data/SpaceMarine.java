@@ -29,6 +29,14 @@ public class SpaceMarine {
                 break;
             } 
         }
+
+        health = 1; 
+        name = "";
+        coordinates = new Coordinates(0, 0);
+        category = AstartesCategory.APOTHECARY;
+        weaponType = Weapon.COMBI_FLAMER;
+        meleeWeapon = MeleeWeapon.CHAIN_AXE;
+        chapter = new Chapter();
     }
 
     public SpaceMarine() {
@@ -183,6 +191,14 @@ public class SpaceMarine {
         "\nТип AstartesCategory: " + category + 
         "\nТип Weapon: " + weaponType + 
         "\nТип MeleeWeapon: " + meleeWeapon;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        SpaceMarine sm = (SpaceMarine) obj;
+        return name == sm.getName() && weaponType == sm.getWeaponType() && category == sm.getCategory() && meleeWeapon == getMeleeWeapon();
     }
 
 }

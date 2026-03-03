@@ -1,8 +1,13 @@
 package data;
 
 public class Chapter {
-    private String name = "Name Chapter"; //Поле не может быть null, Строка не может быть пустой
-    private String world = "Earth"; //Поле не может быть null
+    private String name; //Поле не может быть null, Строка не может быть пустой
+    private String world; //Поле не может быть null
+
+    {
+        name = "";
+        world = "";
+    }
 
     public String getName() {
         return name;

@@ -27,6 +27,7 @@ public class CommandManager {
         commands.put("remove_greater", new RemoveGreaterCommand());
         commands.put("remove_lower", new RemoveLowerCommand());
         commands.put("save", new SaveCommand());
+        commands.put("execute_script", new ExecuteScriptCommand());
     }
 
    
@@ -36,7 +37,7 @@ public class CommandManager {
     }
 
 
-    public void useCommand(String userLine) throws IncorrectCommandException{
+    public static void useCommand(String userLine) throws IncorrectCommandException{
         String[] wordsInLine = userLine.split(" ");
         String firstWord = wordsInLine[0];
         try {

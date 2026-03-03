@@ -3,13 +3,11 @@ import utility.*;
 
 public class Main {
     public static void main(String[] args){
-        CommandManager commandManager = new CommandManager();
-        System.out.println("CONFIG_PATH = " + System.getenv("CONFIG_PATH"));
         FileManager.load();
         while (true) {
             String userLine = ConsoleManager.readLine();
             try {  
-                commandManager.useCommand(userLine); 
+                CommandManager.useCommand(userLine); 
             } catch (IncorrectCommandException e) {
                 System.err.println(e.getMessage());
             }  
