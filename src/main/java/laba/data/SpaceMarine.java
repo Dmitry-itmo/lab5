@@ -9,13 +9,13 @@ import exceptions.IncorrectIDException;
 public class SpaceMarine {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
-    private Coordinates coordinates = new Coordinates(0, 0); //Поле не может быть null
+    private Coordinates coordinates; //Поле не может быть null
     private java.time.LocalDate creationDate = LocalDate.now(); //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private long health = 1; //Значение поля должно быть больше 0
-    private AstartesCategory category = AstartesCategory.APOTHECARY; //Поле не может быть null
-    private Weapon weaponType = Weapon.COMBI_PLASMA_GUN; //Поле может быть null
-    private MeleeWeapon meleeWeapon = MeleeWeapon.CHAIN_AXE; //Поле может быть null
-    private Chapter chapter = new Chapter(); //Поле не может быть null
+    private long health; //Значение поля должно быть больше 0
+    private AstartesCategory category; //Поле не может быть null
+    private Weapon weaponType; //Поле может быть null
+    private MeleeWeapon meleeWeapon; //Поле может быть null
+    private Chapter chapter; //Поле не может быть null
 
     private static ArrayList<Integer> listID = new ArrayList<>();
     private static Integer count = 0;

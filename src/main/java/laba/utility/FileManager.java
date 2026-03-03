@@ -15,6 +15,7 @@ import data.SpaceMarine;
 public class FileManager {
 
     private static XStream xStream;
+    private static String path = System.getenv("CONFIG_PATH");;
 
     static {
         xStream = new XStream();
@@ -29,7 +30,7 @@ public class FileManager {
             
             FileWriter fileWriter = null;
             try {
-                fileWriter = new FileWriter("CONFIG_PATH");
+                fileWriter = new FileWriter(path);
                 fileWriter.write(xml);
             } catch(IOException e) {
                 System.err.println(e);
@@ -50,7 +51,7 @@ public class FileManager {
         try {
             reader = new BufferedReader(
                         new InputStreamReader(
-                            new FileInputStream("CONFIG_PATH"), "UTF-8"));
+                            new FileInputStream(path), "UTF-8"));
             String line;
             StringBuilder result = new StringBuilder();
 
@@ -77,6 +78,7 @@ public class FileManager {
                 HashSet<SpaceMarine> xmlSet = (HashSet<SpaceMarine>) xStream.fromXML(xmlString);
                 for (SpaceMarine spaceMarine : xmlSet) {
                     SpaceMarine.addID(spaceMarine.getId());
+                    
                     CollectionManager.addSpaceMarine(spaceMarine);
                 }
             } catch(XStreamException e) {

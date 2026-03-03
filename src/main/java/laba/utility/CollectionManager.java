@@ -20,7 +20,7 @@ public class CollectionManager {
 
     public static SpaceMarine searchSpaceMarine(Integer id) throws IncorrectIDException{
         for (SpaceMarine spaceMarine : collection) {
-            if (spaceMarine.getId() == id) {
+            if (spaceMarine.getId().equals(id)) {
                 return spaceMarine;
             }
         }

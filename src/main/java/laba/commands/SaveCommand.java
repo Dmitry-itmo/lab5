@@ -8,4 +8,9 @@ public class SaveCommand implements Command{
     public void execute() {
         FileManager.save();
     }
+
+    @Override
+    public String toString() {
+        return "Сохраняет коллекцию в файл";
+    }
 }
