@@ -26,6 +26,7 @@ public class CommandManager {
         commands.put("print_field_ascending_chapter", new PrintFieldAscendingChapterCommand());
         commands.put("remove_greater", new RemoveGreaterCommand());
         commands.put("remove_lower", new RemoveLowerCommand());
+        commands.put("save", new SaveCommand());
     }
 
    

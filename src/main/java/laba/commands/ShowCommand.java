@@ -1,6 +1,9 @@
 package commands;
 
+import java.util.ArrayList;
+
 import data.SpaceMarine;
+import sorter.SortBySpaceMarineID;
 import utility.CollectionManager;
 
 public class ShowCommand implements Command{
@@ -10,7 +13,11 @@ public class ShowCommand implements Command{
             System.out.println("В коллекции нет элементов");
             return;
         }
-        for (SpaceMarine spaceMarine : CollectionManager.getCollection()) {
+
+        ArrayList<SpaceMarine> list = new ArrayList<>(CollectionManager.getCollection());
+        list.sort(new SortBySpaceMarineID());
+
+        for (SpaceMarine spaceMarine : list) {
             System.out.println();
             System.out.println(spaceMarine);
         }

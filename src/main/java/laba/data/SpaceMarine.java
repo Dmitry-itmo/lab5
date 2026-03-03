@@ -11,7 +11,7 @@ public class SpaceMarine {
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates = new Coordinates(0, 0); //Поле не может быть null
     private java.time.LocalDate creationDate = LocalDate.now(); //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private long health; //Значение поля должно быть больше 0
+    private long health = 1; //Значение поля должно быть больше 0
     private AstartesCategory category = AstartesCategory.APOTHECARY; //Поле не может быть null
     private Weapon weaponType = Weapon.COMBI_PLASMA_GUN; //Поле может быть null
     private MeleeWeapon meleeWeapon = MeleeWeapon.CHAIN_AXE; //Поле может быть null
@@ -20,13 +20,15 @@ public class SpaceMarine {
     private static ArrayList<Integer> listID = new ArrayList<>();
     private static Integer count = 0;
 
-    static {
-        listID.add(count+1);
-    }
-
     {
-        count++;
-        id = count;
+        id = count++;
+        while (true) {
+            id++;
+            if (!listID.contains(id)) {
+                listID.add(id);
+                break;
+            } 
+        }
     }
 
     public SpaceMarine() {
@@ -39,6 +41,10 @@ public class SpaceMarine {
 
     public static ArrayList<Integer> getListID() {
         return listID;
+    }
+
+    public static void addID(Integer ID) {
+        listID.add(ID);
     }
 
     public static void removeID(Integer ID) {
@@ -60,7 +66,7 @@ public class SpaceMarine {
     }
 
     public void setHealth(long health) throws IncorrectCommandException{
-        if (health < 0) throw new IncorrectCommandException();
+        if (health <= 0) throw new IncorrectCommandException();
         this.health = health;
 
     }

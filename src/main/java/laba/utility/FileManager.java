@@ -1,0 +1,93 @@
+package utility;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.XStreamException;
+
+import data.SpaceMarine;
+
+public class FileManager {
+
+    private static XStream xStream;
+
+    static {
+        xStream = new XStream();
+        xStream.allowTypesByWildcard(new String[] {"data.**"});
+        
+        xStream.alias("spaceMarine", SpaceMarine.class);
+        xStream.alias("spaceMarines", HashSet.class);
+    }
+    
+    public static void save() {
+            String xml = xStream.toXML(CollectionManager.getCollection());
+            
+            FileWriter fileWriter = null;
+            try {
+                fileWriter = new FileWriter("CONFIG_PATH");
+                fileWriter.write(xml);
+            } catch(IOException e) {
+                System.err.println(e);
+            } finally {
+                try {
+                    fileWriter.close();
+                } catch(IOException e) {
+                    System.err.println(e);
+                }
+            }
+        
+        
+    }
+
+    public static void load() {
+        BufferedReader reader = null;
+        String xmlString = null;
+        try {
+            reader = new BufferedReader(
+                        new InputStreamReader(
+                            new FileInputStream("CONFIG_PATH"), "UTF-8"));
+            String line;
+            StringBuilder result = new StringBuilder();
+
+            while ((line = reader.readLine()) != null) {
+                result.append(line).append("\n");
+            }
+
+            xmlString = result.toString();
+            
+            
+        } catch (IOException e) {
+            System.err.println(e);
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                System.err.println(e);
+            }
+        }
+
+        if (!xmlString.equals("")) {
+            try {
+                @SuppressWarnings("unchecked")
+                HashSet<SpaceMarine> xmlSet = (HashSet<SpaceMarine>) xStream.fromXML(xmlString);
+                for (SpaceMarine spaceMarine : xmlSet) {
+                    SpaceMarine.addID(spaceMarine.getId());
+                    CollectionManager.addSpaceMarine(spaceMarine);
+                }
+            } catch(XStreamException e) {
+                System.err.println(e);
+                System.err.println("Проблема с файлом");
+            } catch (NullPointerException e) {
+                System.err.println(e);
+            } catch (Exception e) {
+                System.err.println(e);
+                System.err.println("Ошибка");
+            }   
+        }
+    }
+}

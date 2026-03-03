@@ -4,6 +4,7 @@ import utility.*;
 public class Main {
     public static void main(String[] args){
         CommandManager commandManager = new CommandManager();
+        FileManager.load();
         
         while (true) {
             String userLine = ConsoleManager.readLine();
@@ -13,7 +14,5 @@ public class Main {
                 System.err.println(e.getMessage());
             }  
         }
-        
-
     }
 } 

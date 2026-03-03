@@ -1,0 +1,36 @@
+<set>
+  <spaceMarine>
+    <id>4</id>
+    <name>Dima</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-03</creationDate>
+    <health>123</health>
+    <category>TERMINATOR</category>
+    <weaponType>COMBI_PLASMA_GUN</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>Marina</name>
+      <world>Earth</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>5</id>
+    <name>Marina</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-03</creationDate>
+    <health>123</health>
+    <category>SUPPRESSOR</category>
+    <weaponType>COMBI_FLAMER</weaponType>
+    <meleeWeapon>CHAIN_AXE</meleeWeapon>
+    <chapter>
+      <name>Dima</name>
+      <world>Mars</world>
+    </chapter>
+  </spaceMarine>
+</set>
