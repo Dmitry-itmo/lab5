@@ -1,10 +1,12 @@
-package utility;
+package laba.utility;
 
 import java.util.HashMap;
 
-import commands.*;
-import exceptions.*;
-
+import laba.commands.*;
+import laba.exceptions.*;
+/**
+ * The class defines commands and monitors their correctness
+ */
 public class CommandManager {
 
     private static HashMap<String,Command> commands = new HashMap<>();
@@ -36,7 +38,11 @@ public class CommandManager {
         return commands;
     }
 
-
+    /**
+     * Метод использования комманды
+     * @param userLine
+     * @throws IncorrectCommandException
+     */
     public static void useCommand(String userLine) throws IncorrectCommandException{
         String[] wordsInLine = userLine.split(" ");
         String firstWord = wordsInLine[0];

@@ -1,6 +1,6 @@
-package commands;
+package laba.commands;
 
-import exceptions.*;
+import laba.exceptions.*;
 
 public interface Command {
     void execute();

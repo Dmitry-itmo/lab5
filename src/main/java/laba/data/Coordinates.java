@@ -1,6 +1,6 @@
-package data;
+package laba.data;
 
-import exceptions.IncorrectCommandException;
+import laba.exceptions.IncorrectCommandException;
 
 public class Coordinates {
     private long x;

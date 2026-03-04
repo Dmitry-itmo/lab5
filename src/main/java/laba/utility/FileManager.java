@@ -1,4 +1,4 @@
-package utility;
+package laba.utility;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,8 +10,10 @@ import java.util.HashSet;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.XStreamException;
 
-import data.SpaceMarine;
-
+import laba.data.SpaceMarine;
+/**
+ * This class is responsible for saving and uploading data from xml files to a collection
+ */
 public class FileManager {
 
     private static XStream xStream;
@@ -19,7 +21,7 @@ public class FileManager {
 
     static {
         xStream = new XStream();
-        xStream.allowTypesByWildcard(new String[] {"data.**"});
+        xStream.allowTypesByWildcard(new String[] {"laba.data.**"});
         
         xStream.alias("spaceMarine", SpaceMarine.class);
         xStream.alias("spaceMarines", HashSet.class);
@@ -73,12 +75,13 @@ public class FileManager {
         }
 
         if (!xmlString.equals("")) {
+            
             try {
                 @SuppressWarnings("unchecked")
                 HashSet<SpaceMarine> xmlSet = (HashSet<SpaceMarine>) xStream.fromXML(xmlString);
+                
                 for (SpaceMarine spaceMarine : xmlSet) {
                     SpaceMarine.addID(spaceMarine.getId());
-                    
                     CollectionManager.addSpaceMarine(spaceMarine);
                 }
             } catch(XStreamException e) {

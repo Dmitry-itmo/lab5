@@ -1,13 +1,15 @@
-package commands;
+package laba.commands;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import data.Chapter;
-import data.SpaceMarine;
-import sorter.SortByChapterName;
-import utility.CollectionManager;
-
+import laba.data.Chapter;
+import laba.data.SpaceMarine;
+import laba.sorter.SortByChapterName;
+import laba.utility.CollectionManager;
+/**
+ * A command that outputs the values of the Chapter class field of all collection elements in ascending order
+ */
 public class PrintFieldAscendingChapterCommand implements Command{
     @Override
     public void execute() {

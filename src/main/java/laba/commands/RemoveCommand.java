@@ -1,9 +1,11 @@
-package commands;
+package laba.commands;
 
-import utility.CollectionManager;
-import data.*;
-import exceptions.*;
-
+import laba.utility.CollectionManager;
+import laba.data.*;
+import laba.exceptions.*;
+/**
+ * The command deletes a collection item by its ID
+ */
 public class RemoveCommand implements Command{
     @Override
     public void execute() {

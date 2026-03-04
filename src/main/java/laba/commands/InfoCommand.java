@@ -1,7 +1,9 @@
-package commands;
+package laba.commands;
 
-import utility.CollectionManager;
-
+import laba.utility.CollectionManager;
+/**
+ * The command that shows information about the collection
+ */
 public class InfoCommand implements Command{
     @Override
     public void execute() {

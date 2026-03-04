@@ -1,10 +1,14 @@
-package utility;
+package laba.utility;
 
 import java.time.LocalDate;
 import java.util.HashSet;
 
-import data.SpaceMarine;
-import exceptions.IncorrectIDException;
+import laba.data.SpaceMarine;
+import laba.exceptions.IncorrectIDException;
+
+/**
+ * The class is responsible for storing and processing the collection
+ */
 
 public class CollectionManager {
     private static HashSet<SpaceMarine> collection = new HashSet<>();
@@ -18,6 +22,13 @@ public class CollectionManager {
         return creationDate;
     }
 
+
+    /**
+     * 
+     * @param id
+     * @return Returns a collection item with a specific ID
+     * @throws IncorrectIDException
+     */
     public static SpaceMarine searchSpaceMarine(Integer id) throws IncorrectIDException{
         for (SpaceMarine spaceMarine : collection) {
             if (spaceMarine.getId().equals(id)) {

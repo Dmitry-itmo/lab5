@@ -1,11 +1,13 @@
-package data;
+package laba.data;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import exceptions.IncorrectCommandException;
-import exceptions.IncorrectIDException;
-
+import laba.exceptions.IncorrectCommandException;
+import laba.exceptions.IncorrectIDException;
+/**
+ * Class of collection items
+ */
 public class SpaceMarine {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
@@ -50,11 +52,11 @@ public class SpaceMarine {
     public static ArrayList<Integer> getListID() {
         return listID;
     }
-
+    
     public static void addID(Integer ID) {
         listID.add(ID);
     }
-
+    
     public static void removeID(Integer ID) {
         listID.remove(ID);
     }

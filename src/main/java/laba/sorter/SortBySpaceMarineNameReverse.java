@@ -1,9 +1,11 @@
-package sorter;
+package laba.sorter;
 
 import java.util.Comparator;
 
-import data.SpaceMarine;
-
+import laba.data.SpaceMarine;
+/**
+ * Sorting objects of the SpaceMarine class by their names, but in reverse alphabetical order
+ */
 public class SortBySpaceMarineNameReverse implements Comparator<SpaceMarine>{
 
     @Override

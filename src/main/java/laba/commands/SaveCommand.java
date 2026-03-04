@@ -1,8 +1,10 @@
-package commands;
+package laba.commands;
 
-import utility.FileManager;
+import laba.utility.FileManager;
 
-
+/**
+ * The command saves the collection to an xml file.
+ */
 public class SaveCommand implements Command{
     @Override
     public void execute() {

@@ -1,12 +1,12 @@
-package commands;
+package laba.commands;
 
-import data.Chapter;
-import data.Coordinates;
-import data.SpaceMarine;
-import exceptions.IncorrectCommandException;
-import utility.CollectionManager;
-import static utility.ConsoleManager.*;
-
+import laba.data.*;
+import laba.exceptions.IncorrectCommandException;
+import laba.utility.CollectionManager;
+import static laba.utility.ConsoleManager.*;
+/**
+ * Adds a new item to the collection
+ */
 public class AddCommand implements Command{
 
 

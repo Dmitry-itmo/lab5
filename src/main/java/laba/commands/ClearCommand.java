@@ -1,7 +1,9 @@
-package commands;
+package laba.commands;
 
-import utility.CollectionManager;
-
+import laba.utility.CollectionManager;
+/**
+ * Clears the collection
+ */
 public class ClearCommand implements Command{
     @Override
     public void execute() {

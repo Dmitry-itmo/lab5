@@ -1,11 +1,13 @@
-package commands;
+package laba.commands;
 
 import java.util.ArrayList;
 
-import data.SpaceMarine;
-import sorter.SortBySpaceMarineNameReverse;
-import utility.CollectionManager;
-
+import laba.data.SpaceMarine;
+import laba.sorter.SortBySpaceMarineNameReverse;
+import laba.utility.CollectionManager;
+/**
+ * A command that outputs the elements of a collection in descending order
+ */
 public class PrintDescendingCommand implements Command{
     @Override
     public void execute() {

@@ -1,4 +1,4 @@
-package commands;
+package laba.commands;
 
 public class ExitCommand implements Command{
 

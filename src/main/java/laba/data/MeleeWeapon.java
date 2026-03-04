@@ -1,4 +1,4 @@
-package data;
+package laba.data;
 
 public enum MeleeWeapon {
     CHAIN_SWORD,

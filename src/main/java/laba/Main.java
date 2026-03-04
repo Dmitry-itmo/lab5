@@ -1,6 +1,10 @@
-import exceptions.*;
-import utility.*;
+package laba;
 
+import laba.exceptions.*;
+import laba.utility.*;
+/**
+ * @author Romanov Dmitry
+ */
 public class Main {
     public static void main(String[] args){
         FileManager.load();

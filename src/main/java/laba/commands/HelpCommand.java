@@ -1,9 +1,11 @@
-package commands;
+package laba.commands;
 
 import java.util.Map;
 
-import utility.CommandManager;
-
+import laba.utility.CommandManager;
+/**
+ * A command that outputs a description of each command
+ */
 public class HelpCommand implements Command{
     
     public void execute() {

@@ -1,11 +1,13 @@
-package commands;
+package laba.commands;
 
 import java.util.ArrayList;
 
-import data.SpaceMarine;
-import sorter.SortBySpaceMarineID;
-import utility.CollectionManager;
-
+import laba.data.SpaceMarine;
+import laba.sorter.SortBySpaceMarineID;
+import laba.utility.CollectionManager;
+/**
+ * The command shows information about each item in the collection
+ */
 public class ShowCommand implements Command{
     @Override
     public void execute() {

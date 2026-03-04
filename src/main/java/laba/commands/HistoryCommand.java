@@ -1,7 +1,9 @@
-package commands;
+package laba.commands;
 
 import java.util.ArrayDeque;
-
+/**
+ * Shows the history of the last 9 teams
+ */
 public class HistoryCommand implements Command{
     private static ArrayDeque<String> historyCommand = new ArrayDeque<>();
 

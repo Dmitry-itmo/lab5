@@ -1,14 +1,16 @@
-package commands;
+package laba.commands;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import exceptions.IncorrectCommandException;
-import exceptions.IncorrectIDException;
-import utility.CommandManager;
-
+import laba.exceptions.IncorrectCommandException;
+import laba.exceptions.IncorrectIDException;
+import laba.utility.CommandManager;
+/**
+ * Executes commands from the file
+ */
 public class ExecuteScriptCommand implements Command{
     @Override
     public void execute() {

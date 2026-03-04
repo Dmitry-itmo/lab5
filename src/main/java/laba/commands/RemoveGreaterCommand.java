@@ -1,13 +1,15 @@
-package commands;
+package laba.commands;
 
 import java.util.ArrayList;
 
-import data.SpaceMarine;
-import exceptions.IncorrectCommandException;
-import exceptions.IncorrectIDException;
-import sorter.SortBySpaceMarineName;
-import utility.CollectionManager;
-
+import laba.data.SpaceMarine;
+import laba.exceptions.IncorrectCommandException;
+import laba.exceptions.IncorrectIDException;
+import laba.sorter.SortBySpaceMarineName;
+import laba.utility.CollectionManager;
+/**
+ * The command deletes all items from the collection that exceed the specified value.
+ */
 public class RemoveGreaterCommand implements Command{
     @Override
     public void execute() {

@@ -1,11 +1,14 @@
-package commands;
+package laba.commands;
 
-import data.*;
-import exceptions.IncorrectCommandException;
-import exceptions.IncorrectIDException;
-import utility.*;
-import static utility.ConsoleManager.*;
+import laba.data.*;
+import laba.exceptions.IncorrectCommandException;
+import laba.exceptions.IncorrectIDException;
+import laba.utility.*;
+import static laba.utility.ConsoleManager.*;
 
+/**
+ * The command updates information about a collection item whose id is equal to the specified one.
+ */
 public class UpdateCommand implements Command{
     @Override
     public void execute() {
