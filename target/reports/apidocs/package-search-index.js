@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"laba"},{"l":"laba.commands"},{"l":"laba.data"},{"l":"laba.exceptions"},{"l":"laba.sorter"},{"l":"laba.utility"}];updateSearchResults();

@@ -1,0 +1,54 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'C:/Users/ggggg/.m2/repository/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.jar;C:/Users/ggggg/.m2/repository/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar;C:/Users/ggggg/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/ggggg/OneDrive/Рабочий стол/project/lab5/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/ggggg/OneDrive/Рабочий стол/project/lab5/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'lab5 1.0 API'
+-use
+-version
+-windowtitle
+'lab5 1.0 API'
+laba.commands
+laba.data
+laba.exceptions
+laba
+laba.sorter
+laba.utility
+C:\Users\ggggg\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar = 1772586239725
+C:\Users\ggggg\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar = 1772586239732
+C:\Users\ggggg\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar = 1772586239734
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\src\main\java = 1772453830415
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\allclasses-index.html = 1772595035506
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\allpackages-index.html = 1772595035511
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\element-list = 1772595035305
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\help-doc.html = 1772595035573
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\index-all.html = 1772595035563
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\index.html = 1772595035474
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\jquery-ui.overrides.css = 1772595035591
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\member-search-index.js = 1772595035520
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\module-search-index.js = 1772595035515
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\overview-summary.html = 1772595035568
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\overview-tree.html = 1772595035470
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\package-search-index.js = 1772595035516
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\script.js = 1772595035578
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\search.js = 1772595035580
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\serialized-form.html = 1772595035359
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\stylesheet.css = 1772595035576
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\tag-search-index.js = 1772595035522
+C:\Users\ggggg\OneDrive\Рабочий стол\project\lab5\target\reports\apidocs\type-search-index.js = 1772595035518
