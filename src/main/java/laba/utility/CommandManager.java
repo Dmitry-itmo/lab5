@@ -59,8 +59,16 @@ public class CommandManager {
             throw new IncorrectCommandException();
 
         }
+    }
 
-
+    public static Command getCommand(String userLine) throws IncorrectCommandException{
+        String[] wordsInLine = userLine.split(" ");
+        String firstWord = wordsInLine[0];
+        try {
+            return commands.get(firstWord);   
+        }  catch (Exception e) {
+            throw new IncorrectCommandException();
+        }
 
     }
 

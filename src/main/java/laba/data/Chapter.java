@@ -9,6 +9,11 @@ public class Chapter {
         world = "";
     }
 
+    public boolean validate() {
+        if (name == null || world == null) return false;
+        return true;
+    }
+
     public String getName() {
         return name;
     }

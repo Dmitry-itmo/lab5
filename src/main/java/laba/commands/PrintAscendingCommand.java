@@ -2,6 +2,7 @@ package laba.commands;
 
 import laba.sorter.SortBySpaceMarineName;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import laba.data.SpaceMarine;
 import laba.utility.CollectionManager;
@@ -16,12 +17,15 @@ public class PrintAscendingCommand implements Command{
             return;
         }
         ArrayList<SpaceMarine> list = new ArrayList<>(CollectionManager.getCollection());
-        list.sort(new SortBySpaceMarineName());
+        Collections.sort(list);
+
 
         for (SpaceMarine spaceMarine : list) {
             System.out.println();
             System.out.println(spaceMarine);
         }
+        
+        System.out.println();
     }
 
     @Override

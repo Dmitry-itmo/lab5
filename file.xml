@@ -16,4 +16,21 @@
       <world>123</world>
     </chapter>
   </spaceMarine>
+  <spaceMarine>
+    <id>2</id>
+    <name>123</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-04</creationDate>
+    <health>123</health>
+    <category>TERMINATOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>CHAIN_AXE</meleeWeapon>
+    <chapter>
+      <name>123</name>
+      <world>123</world>
+    </chapter>
+  </spaceMarine>
 </set>

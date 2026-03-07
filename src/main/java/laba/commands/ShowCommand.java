@@ -23,6 +23,7 @@ public class ShowCommand implements Command{
             System.out.println();
             System.out.println(spaceMarine);
         }
+        System.out.println();
     }
     
     @Override

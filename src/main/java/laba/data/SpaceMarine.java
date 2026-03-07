@@ -8,7 +8,7 @@ import laba.exceptions.IncorrectIDException;
 /**
  * Class of collection items
  */
-public class SpaceMarine {
+public class SpaceMarine implements Comparable<SpaceMarine>{
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
@@ -41,6 +41,22 @@ public class SpaceMarine {
         chapter = new Chapter();
     }
 
+
+    public boolean validate() {
+        if (name == null || coordinates == null || creationDate == null
+            || category == null || weaponType == null || meleeWeapon == null 
+            || chapter == null || id == null
+        ) return false;
+        if (health <= 0 || !coordinates.validate() || !chapter.validate()) return false;
+        if (creationDate.isAfter(LocalDate.now())) return false;
+        return true;
+    }
+
+    @Override
+    public int compareTo(SpaceMarine sm) {
+        return name.compareTo(sm.getName());
+    }
+
     public SpaceMarine() {
     }
     
@@ -53,7 +69,13 @@ public class SpaceMarine {
         return listID;
     }
     
-    public static void addID(Integer ID) {
+    public static void addID(Integer ID) throws IncorrectIDException{
+        for (Integer i : listID) {
+            
+            if (i.equals(ID)) {
+                throw new IncorrectIDException();
+            }
+        }
         listID.add(ID);
     }
     
@@ -90,20 +112,20 @@ public class SpaceMarine {
     }
 
      public void setCategory(String line) throws IncorrectCommandException{
-        switch (line) {
-            case "Inceptor": 
+        switch (line.toUpperCase()) {
+            case "INCEPTOR": 
                 category = AstartesCategory.INCEPTOR;
                 break;
-            case "Supressor": 
+            case "SUPPRESSOR": 
                 category = AstartesCategory.SUPPRESSOR; 
                 break;
-            case "Terminator": 
+            case "TERMINATOR": 
                 category = AstartesCategory.TERMINATOR;
                 break;
-            case "Chaplain": 
+            case "CHAPLAIN": 
                 category = AstartesCategory.CHAPLAIN;
                 break;
-            case "Apothecary": 
+            case "APOTHECARY": 
                 category = AstartesCategory.APOTHECARY;
                 break;
             default: throw new IncorrectCommandException(); 
@@ -112,16 +134,16 @@ public class SpaceMarine {
 
     public void setMeleeWeapon(String line) throws IncorrectCommandException{
         
-        switch (line) {
-            case "Chain sword": 
+        switch (line.toUpperCase()) {
+            case "CHAIN_SWORD": 
                 meleeWeapon = MeleeWeapon.CHAIN_SWORD;
                 break;
-            case "Chain axe": 
+            case "CHAIN_AXE": 
                 meleeWeapon = MeleeWeapon.CHAIN_AXE;
                 break;
-            case "Manreaper": 
+            case "MANREAPER": 
                 meleeWeapon = MeleeWeapon.MANREAPER;
-            case "Power Fist": 
+            case "POWER_FIST": 
                 meleeWeapon = MeleeWeapon.POWER_FIST;
                 break;
             default: throw new IncorrectCommandException();
@@ -130,14 +152,14 @@ public class SpaceMarine {
     }
 
     public void setWeaponType(String line) throws IncorrectCommandException{
-        switch (line) {
-            case "Combi flamer":
+        switch (line.toUpperCase()) {
+            case "COMBI_FLAMER":
                 weaponType = Weapon.COMBI_FLAMER; 
                 break;
-            case "Combi plasma gun":
+            case "COMBI_PLASMA_GUN":
                 weaponType = Weapon.COMBI_PLASMA_GUN;
                 break;
-            case "Flamer": 
+            case "FLAMER": 
                 weaponType = Weapon.FLAMER;
                 break;
             default:
@@ -188,7 +210,10 @@ public class SpaceMarine {
         return "ID: " + id +
         "\nИмя: " + name + 
         "\nКоординаты: " + coordinates.toString() + 
-        "\nChapter: \n" + chapter.toString() + 
+        "\nЗдоровье: " + health +
+        "\nChapter {" + 
+        "\n   name: "+chapter.getName() +
+        "\n   world: "+chapter.getWorld() + "\n}" + 
         "\nДата создания элемента: " + creationDate +
         "\nТип AstartesCategory: " + category + 
         "\nТип Weapon: " + weaponType + 
@@ -200,7 +225,15 @@ public class SpaceMarine {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         SpaceMarine sm = (SpaceMarine) obj;
-        return name == sm.getName() && weaponType == sm.getWeaponType() && category == sm.getCategory() && meleeWeapon == getMeleeWeapon();
+        return name == sm.getName() &&
+         weaponType == sm.getWeaponType() &&
+          category == sm.getCategory() && 
+          meleeWeapon == getMeleeWeapon() &&
+          coordinates.getX() == sm.getCoordinates().getX() &&
+          coordinates.getY() == sm.getCoordinates().getY() && 
+          meleeWeapon.equals(sm.getMeleeWeapon()) &&
+          weaponType.equals(sm.getWeaponType()) &&
+          category.equals(sm.getCategory());
     }
 
 }

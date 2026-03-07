@@ -1,6 +1,8 @@
 package laba.commands;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 import laba.data.SpaceMarine;
 import laba.exceptions.IncorrectCommandException;
@@ -19,11 +21,13 @@ public class RemoveLowerCommand implements Command{
     @Override
     public void execute(String id) throws IncorrectCommandException, IncorrectIDException {
         ArrayList<SpaceMarine> list = new ArrayList<>(CollectionManager.getCollection());
-        list.sort(new SortBySpaceMarineName());
-        
-        SpaceMarine spaceMarine = CollectionManager.searchSpaceMarine(Integer.parseInt(id));
+    
+        SpaceMarine spaceMarine = CollectionManager.addElementSpaceMarine();
+        list.add(spaceMarine);
+
+        Collections.reverse(list);
         int index = list.indexOf(spaceMarine);
-        for (int i = index-1; i >= 0; i--) {
+        for (int i = index+1; i < list.size(); i++) {
             CollectionManager.removeElement(list.get(i));
             SpaceMarine.removeID(list.get(i).getId());
             System.out.println("Элемент с ID " + list.get(i).getId() + " удален");

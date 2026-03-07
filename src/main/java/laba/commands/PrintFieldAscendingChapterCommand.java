@@ -28,6 +28,8 @@ public class PrintFieldAscendingChapterCommand implements Command{
             System.out.println();
             System.out.println(chapter);
         }
+        
+        System.out.println();
     }
 
     @Override

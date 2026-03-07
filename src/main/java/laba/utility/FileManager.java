@@ -11,6 +11,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.XStreamException;
 
 import laba.data.SpaceMarine;
+import laba.exceptions.IncorrectIDException;
 /**
  * This class is responsible for saving and uploading data from xml files to a collection
  */
@@ -81,7 +82,18 @@ public class FileManager {
                 HashSet<SpaceMarine> xmlSet = (HashSet<SpaceMarine>) xStream.fromXML(xmlString);
                 
                 for (SpaceMarine spaceMarine : xmlSet) {
-                    SpaceMarine.addID(spaceMarine.getId());
+                    if (!spaceMarine.validate()) {
+                        System.err.println("Неправильно введенные данные в файле для элеметов коллекции");
+                        System.err.println("Коллекция не загрузилась");
+                        return;
+                    }
+                    try {
+                        SpaceMarine.addID(spaceMarine.getId());
+                    } catch (IncorrectIDException e) {
+                        System.out.println("Неправильный ID");
+                        System.err.println("Коллекция не загрузилась");
+                        return;
+                    } 
                     CollectionManager.addSpaceMarine(spaceMarine);
                 }
             } catch(XStreamException e) {

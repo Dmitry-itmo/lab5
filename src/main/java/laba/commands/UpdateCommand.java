@@ -33,7 +33,7 @@ public class UpdateCommand implements Command{
             }
         }
         while (true) {
-            System.out.println("Введите координату Y: ");
+            System.out.println("Введите координату Y (Y > -192): ");
             try {
                 coordinates.setY(Float.parseFloat(readLine()));
                 break;

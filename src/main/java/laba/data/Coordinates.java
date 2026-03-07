@@ -6,9 +6,14 @@ public class Coordinates {
     private long x;
     private float y; //Значение поля должно быть больше -192
 
-     public Coordinates(long x, float y) {
+    public Coordinates(long x, float y) {
         this.x = x;
         this.y = y;
+    }
+
+    public boolean validate() {
+        if (y <= -192) return false;
+        return true;
     }
 
     public void setX(long x) {

@@ -29,7 +29,7 @@ public class AddCommand implements Command{
             }
         }
         while (true) {
-            System.out.println("Введите координату Y: ");
+            System.out.println("Введите координату Y (Y > -192): ");
             try {
                 coordinates.setY(Float.parseFloat(readLine()));
                 break;
@@ -53,7 +53,7 @@ public class AddCommand implements Command{
 
         while(true) {
             try {
-                System.out.println("Введите одну из категорий Inceptor, Supressor, Terminator, Chaplain, Apothecary");
+                System.out.println("Введите одну из категорий INCEPTOR, SUPPRESSOR, Terminator, Chaplain, Apothecary");
                 spaceMarine.setCategory(readLine());
                 break;
             } catch(IncorrectCommandException e) {

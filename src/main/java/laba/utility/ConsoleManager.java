@@ -2,6 +2,7 @@ package laba.utility;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 /**
  * The class that reads the console
  */
@@ -10,7 +11,13 @@ public class ConsoleManager {
 
     public static String readLine() {
         try {
-            return reader.readLine();
+            System.out.print(">>> ");
+            String readerString = reader.readLine();
+            if (readerString == null) {
+                
+                System.exit(0);
+            }
+            return readerString;
         } catch (Exception e) {
             return e.getMessage();
         }
