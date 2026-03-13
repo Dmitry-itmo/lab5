@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import laba.data.SpaceMarine;
-import laba.sorter.SortBySpaceMarineNameReverse;
 import laba.utility.CollectionManager;
 /**
  * A command that outputs the elements of a collection in descending order
@@ -17,8 +16,8 @@ public class PrintDescendingCommand implements Command{
             return;
         }
         ArrayList<SpaceMarine> list = new ArrayList<>(CollectionManager.getCollection());
+        Collections.sort(list);
         Collections.reverse(list);
-
         for (SpaceMarine spaceMarine : list) {
             System.out.println();
             System.out.println(spaceMarine);

@@ -1,2 +1,2 @@
-execute_script script.txt
 info
+execute_script A.txt

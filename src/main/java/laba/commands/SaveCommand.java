@@ -14,6 +14,6 @@ public class SaveCommand implements Command{
 
     @Override
     public String toString() {
-        return "Сохраняет коллекцию в файл";
+        return "save - сохраняет коллекцию в файл";
     }
 }

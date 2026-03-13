@@ -1,19 +1,36 @@
 <set>
   <spaceMarine>
-    <id>1</id>
+    <id>4</id>
     <name>Dima</name>
     <coordinates>
       <x>123</x>
       <y>123.0</y>
     </coordinates>
-    <creationDate>2026-03-04</creationDate>
+    <creationDate>2026-03-13</creationDate>
     <health>123</health>
-    <category>TERMINATOR</category>
+    <category>INCEPTOR</category>
     <weaponType>FLAMER</weaponType>
     <meleeWeapon>POWER_FIST</meleeWeapon>
     <chapter>
-      <name>Name</name>
-      <world>123</world>
+      <name>name</name>
+      <world>world</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>5</id>
+    <name>A</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-13</creationDate>
+    <health>123</health>
+    <category>INCEPTOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>name</name>
+      <world>world</world>
     </chapter>
   </spaceMarine>
   <spaceMarine>
@@ -31,6 +48,125 @@
     <chapter>
       <name>123</name>
       <world>123</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>1</id>
+    <name>Dima</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-04</creationDate>
+    <health>123</health>
+    <category>TERMINATOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>Name</name>
+      <world>123</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>9</id>
+    <name>E</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-13</creationDate>
+    <health>123</health>
+    <category>INCEPTOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>name</name>
+      <world>world</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>10</id>
+    <name>F</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-13</creationDate>
+    <health>123</health>
+    <category>INCEPTOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>name</name>
+      <world>world</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>6</id>
+    <name>B</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-13</creationDate>
+    <health>123</health>
+    <category>INCEPTOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>name</name>
+      <world>world</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>3</id>
+    <name>Marina</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-07</creationDate>
+    <health>123</health>
+    <category>TERMINATOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>Dima</name>
+      <world>qer</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>7</id>
+    <name>C</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-13</creationDate>
+    <health>123</health>
+    <category>INCEPTOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>name</name>
+      <world>world</world>
+    </chapter>
+  </spaceMarine>
+  <spaceMarine>
+    <id>8</id>
+    <name>D</name>
+    <coordinates>
+      <x>123</x>
+      <y>123.0</y>
+    </coordinates>
+    <creationDate>2026-03-13</creationDate>
+    <health>123</health>
+    <category>INCEPTOR</category>
+    <weaponType>FLAMER</weaponType>
+    <meleeWeapon>POWER_FIST</meleeWeapon>
+    <chapter>
+      <name>name</name>
+      <world>world</world>
     </chapter>
   </spaceMarine>
 </set>

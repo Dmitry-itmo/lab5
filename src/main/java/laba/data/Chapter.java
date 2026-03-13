@@ -1,12 +1,17 @@
 package laba.data;
 
-public class Chapter {
+public class Chapter implements Comparable<Chapter>{
     private String name; //Поле не может быть null, Строка не может быть пустой
     private String world; //Поле не может быть null
 
     {
         name = "";
         world = "";
+    }
+
+    @Override
+    public int compareTo(Chapter chapter) {
+        return name.compareTo(chapter.getName());
     }
 
     public boolean validate() {
@@ -32,6 +37,6 @@ public class Chapter {
 
     @Override
     public String toString() {
-        return "Name: " + name + " World: " + world;
+        return "Name: " + name + "\nWorld: " + world;
     }
 }

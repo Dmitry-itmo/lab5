@@ -53,10 +53,11 @@ public class CollectionManager {
     }
 
     public static HashSet<SpaceMarine> getCollection() {
+        collection.iterator();
         return collection;
     } 
 
-    public static SpaceMarine addElementSpaceMarine() {
+    public static SpaceMarine createElementSpaceMarine() {
         SpaceMarine spaceMarine = new SpaceMarine();
         System.out.println("Введите имя коробля: ");
         spaceMarine.setName(readLine());
@@ -97,7 +98,7 @@ public class CollectionManager {
 
         while(true) {
             try {
-                System.out.println("Введите одну из категорий INCEPTOR, SUPPRESSOR, Terminator, Chaplain, Apothecary");
+                System.out.println("Введите одну из категорий INCEPTOR, SUPPRESSOR, TERMINATOR, CHAPLAIN, APOTHECARY");
                 spaceMarine.setCategory(readLine());
                 break;
             } catch(IncorrectCommandException e) {
@@ -107,7 +108,7 @@ public class CollectionManager {
 
         while(true) {
             try {
-                System.out.println("Введите одну из категорий Chain sword, Chain axe, Manreaper, Power Fist");
+                System.out.println("Введите одну из категорий CHAIN_SWORD, CHAIN_AXE, MANREAPER, POWER_FIST");
                 spaceMarine.setMeleeWeapon(readLine());
                 break;
             } catch(IncorrectCommandException e) {
@@ -117,7 +118,7 @@ public class CollectionManager {
 
         while(true) {
             try {
-                System.out.println("Введите одну из категорий Combi flamer, Combi plasma gun, Flamer");
+                System.out.println("Введите одну из категорий COMBI_FLAMER, COMBI_PLASMA_GUN, FLAMER");
                 spaceMarine.setWeaponType(readLine());
                 break;
             } catch(IncorrectCommandException e) {

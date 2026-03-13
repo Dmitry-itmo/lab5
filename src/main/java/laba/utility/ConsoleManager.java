@@ -14,7 +14,6 @@ public class ConsoleManager {
             System.out.print(">>> ");
             String readerString = reader.readLine();
             if (readerString == null) {
-                
                 System.exit(0);
             }
             return readerString;

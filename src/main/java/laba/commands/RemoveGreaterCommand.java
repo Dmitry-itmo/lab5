@@ -15,7 +15,7 @@ public class RemoveGreaterCommand implements Command{
     public void execute() {
         ArrayList<SpaceMarine> list = new ArrayList<>(CollectionManager.getCollection());
     
-        SpaceMarine spaceMarine = CollectionManager.addElementSpaceMarine();
+        SpaceMarine spaceMarine = CollectionManager.createElementSpaceMarine();
         list.add(spaceMarine);
 
         Collections.sort(list);

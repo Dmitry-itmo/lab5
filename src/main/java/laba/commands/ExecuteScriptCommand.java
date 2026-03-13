@@ -47,6 +47,8 @@ public class ExecuteScriptCommand implements Command{
         } catch (IOException e) {
             System.err.println(e);
         } finally {
+            elementSpaceMarine = new ArrayList<String>();
+            commandADD = false;
             try {
                 reader.close();
             } catch (IOException e) {
@@ -66,18 +68,19 @@ public class ExecuteScriptCommand implements Command{
                     setParametr(elementSpaceMarine);   
                 }
             } else { 
-            if (CommandManager.getCommand(command) instanceof ExecuteScriptCommand) {
-                if (count < 10){
-                    count++;
-                    CommandManager.useCommand(command);
-                } else {
-                    System.out.println("Нельзя больше 10 использовать execute_script");
-                    count = 0;    
-                }
-            } 
-            if (!(CommandManager.getCommand(command) instanceof ExecuteScriptCommand))
-            CommandManager.useCommand(command);
-            
+                if (CommandManager.getCommand(command) instanceof ExecuteScriptCommand) {
+                    if (count <= 10){
+                        count++;
+                        CommandManager.useCommand(command);
+                        count--;
+                    } else {
+                        System.out.println("Глубина не может быть больше 10");
+                        throw new IncorrectCommandException();
+                    }
+                } 
+                if (!(CommandManager.getCommand(command) instanceof ExecuteScriptCommand))
+                CommandManager.useCommand(command);
+                
             }
         }
     }

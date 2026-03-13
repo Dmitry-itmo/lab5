@@ -2,10 +2,10 @@ package laba.commands;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Collections;
 
 import laba.data.Chapter;
 import laba.data.SpaceMarine;
-import laba.sorter.SortByChapterName;
 import laba.utility.CollectionManager;
 /**
  * A command that outputs the values of the Chapter class field of all collection elements in ascending order
@@ -22,7 +22,7 @@ public class PrintFieldAscendingChapterCommand implements Command{
         for (SpaceMarine spaceMarine : hashSet) {
             list.add(spaceMarine.getChapter());
         }
-        list.sort(new SortByChapterName());
+        Collections.sort(list);
 
         for (Chapter chapter : list) {
             System.out.println();

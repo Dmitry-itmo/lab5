@@ -67,7 +67,7 @@ public class UpdateCommand implements Command{
 
         while(true) {
             try {
-                System.out.println("Введите одну из категорий Chain sword, Chain axe, Manreaper, Power Fist");
+                System.out.println("Введите одну из категорий Chain_sword, Chain_axe, Manreaper, Power_Fist");
                 spaceMarine.setMeleeWeapon(readLine());
                 break;
             } catch(IncorrectCommandException e) {
@@ -77,7 +77,7 @@ public class UpdateCommand implements Command{
 
         while(true) {
             try {
-                System.out.println("Введите одну из категорий Combi flamer, Combi plasma gun, Flamer");
+                System.out.println("Введите одну из категорий Combi_flamer, Combi_plasma_gun, Flamer");
                 spaceMarine.setWeaponType(readLine());
                 break;
             } catch(IncorrectCommandException e) {

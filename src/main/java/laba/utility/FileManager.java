@@ -83,15 +83,15 @@ public class FileManager {
                 
                 for (SpaceMarine spaceMarine : xmlSet) {
                     if (!spaceMarine.validate()) {
-                        System.err.println("Неправильно введенные данные в файле для элеметов коллекции");
-                        System.err.println("Коллекция не загрузилась");
+                        System.err.println("Неправильно введенные данные в файлe");
+                        System.err.println(spaceMarine);
                         return;
                     }
                     try {
                         SpaceMarine.addID(spaceMarine.getId());
                     } catch (IncorrectIDException e) {
-                        System.out.println("Неправильный ID");
-                        System.err.println("Коллекция не загрузилась");
+                        System.err.println("Неправильный ID");
+                        System.err.println(spaceMarine);
                         return;
                     } 
                     CollectionManager.addSpaceMarine(spaceMarine);
