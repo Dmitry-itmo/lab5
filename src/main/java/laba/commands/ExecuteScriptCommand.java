@@ -1,6 +1,7 @@
 package laba.commands;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,7 +35,7 @@ public class ExecuteScriptCommand implements Command{
         try {
             reader = new BufferedReader(
                         new InputStreamReader(
-                            new FileInputStream("script\\"+path), "UTF-8"));
+                            new FileInputStream("script"+ File.separator+path), "UTF-8"));
             String line;
             StringBuilder result = new StringBuilder();
             
@@ -75,6 +76,7 @@ public class ExecuteScriptCommand implements Command{
                         count--;
                     } else {
                         System.out.println("Глубина не может быть больше 10");
+                        count = 0;
                         throw new IncorrectCommandException();
                     }
                 } 

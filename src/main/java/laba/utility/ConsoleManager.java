@@ -14,6 +14,7 @@ public class ConsoleManager {
             System.out.print(">>> ");
             String readerString = reader.readLine();
             if (readerString == null) {
+                System.out.println("Выход из программы");
                 System.exit(0);
             }
             return readerString;
